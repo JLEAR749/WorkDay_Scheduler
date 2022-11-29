@@ -28,7 +28,7 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ## Screenshot
-![screenshot] (asset\workday scheduler screenshot.png)
+![workday scheduler screenshot](https://user-images.githubusercontent.com/112676566/204442900-545d64fa-d510-44b2-9eb0-ac99f38846f8.png)
 
 ## Credits
 
