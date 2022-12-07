@@ -1,5 +1,6 @@
 //add current day at the top of the planner and how often it resets
 var element = document.querySelector("#datepicker")
+var rowTimeBlock = document.querySelector('.container-lg px-5')
 
 function setTime() {
     $("#datepicker").text(dayjs().format("YYYY-MMMM-DD HH:mm:ss"))
@@ -25,23 +26,24 @@ function setColors() {
 }
 setColors();
 
+// ?$(document).ready(function () {
+    //if save button clicked, set item to local storage
+    $('.saveBtn').on('click', function () {
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr('id');
 
-var rowTimeBlock = document.querySelector('.container-lg px-5')
+        localStorage.setItem(time, text);
+    });
 
-//if save button clicked, set item to local storage
-$('.saveBtn').on('click', function () {
-    var text = $(this).silblings(".container-lg px-5").text();
-    var time = $(this).parent().attr('id');
+// })
 
-    localStorage.setItem(timeKey, textValue);
-});
 
-$('#hour9').text(localStorage.getItem('hour9'));
-$('#hour10').text(localStorage.getItem('hour10'));
-$('#hour11').text(localStorage.getItem('hour11'));
-$('#hour12').text(localStorage.getItem('hour12'));
-$('#hour13').text(localStorage.getItem('hour13'));
-$('#hour14').text(localStorage.getItem('hour14'));
-$('#hour15').text(localStorage.getItem('hour15'));
-$('#hour16').text(localStorage.getItem('hour16'));
-$('#hour17').text(localStorage.getItem('hour17'));
+$('#9-hour').val(localStorage.getItem('hour-9'));
+$('#10-hour').val(localStorage.getItem('hour-10'));
+$('#11-hour').val(localStorage.getItem('hour-11'));
+$('#12-hour').val(localStorage.getItem('hour-12'));
+$('#13-hour').val(localStorage.getItem('hour-13'));
+$('#14-hour').val(localStorage.getItem('hour-14'));
+$('#15-hour').val(localStorage.getItem('hour-15'));
+$('#16-hour').val(localStorage.getItem('hour-16'));
+$('#17-hour').val(localStorage.getItem('hour-17'));
